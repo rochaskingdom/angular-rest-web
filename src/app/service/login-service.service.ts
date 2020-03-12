@@ -22,7 +22,7 @@ export class LoginServiceService {
         // console.info("Token: " + localStorage.getItem("token"));
     },
       error => {
-      alert("Erro ao fazer login!");
+      alert("Acesso Negado!");
       }
       );
   }
