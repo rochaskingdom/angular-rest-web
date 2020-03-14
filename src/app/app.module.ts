@@ -9,22 +9,23 @@ import {HomeComponent} from './home/home.component'; // Requisicoes AJAX
 import {RouterModule, Routes} from '@angular/router';
 import {LoginComponent} from './login/login.component';
 import {HttpInterceptorModule} from './service/header-interceptor.service';
-import {UserComponent} from './model/user/user.component';
+import {UsuarioComponent} from './componente/usuario/usuario.component';
 
 export const appRouters: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
-  {path: '', component: LoginComponent}
+  {path: '', component: LoginComponent},
+  {path: 'usuarioList', component: UsuarioComponent}
 ];
 
 export const routes: ModuleWithProviders = RouterModule.forRoot(appRouters);
 
 @NgModule({
   declarations: [
-    AppComponent,
     HomeComponent,
+    AppComponent,
     LoginComponent,
-    UserComponent,
+    UsuarioComponent,
   ],
   imports: [
     BrowserModule,
