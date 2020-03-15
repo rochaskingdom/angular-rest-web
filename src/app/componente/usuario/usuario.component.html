@@ -1,19 +1,27 @@
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-<table class="table">
+<br><br>
+<form class="form-inline">
+  <div class="form-group mx-sm-3 mb-2">
+    <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="nome" placeholder="Pesquisa por nome">
+  </div>
+  <button type="button" (click)="consultarUsuario()" class="btn btn-primary mb-2">Buscar</button>
+</form>
 
-  <thead>
-    <th scope="col">ID</th>
-    <th scope="col">NOME</th>
-    <th scope="col">CPF</th>
+<table class="table">
+  <thead class="thead-dark">
+  <th scope="col">ID</th>
+  <th scope="col">NOME</th>
+  <th scope="col">CPF</th>
   </thead>
 
   <tbody>
-    <tr *ngFor="let usuario of usuarios">
-      <td>{{usuario.id}}</td>
-      <td>{{usuario.nome}}</td>
-      <td>{{usuario.cpf}}</td>
-      <td><button class="btn btn-danger" (click)="deleteUsuario(usuario.id)">Delete</button></td>
-    </tr>
+  <tr *ngFor="let usuario of usuarios">
+    <td>{{usuario.id}}</td>
+    <td>{{usuario.nome}}</td>
+    <td>{{usuario.cpf}}</td>
+    <td>
+      <button class="btn btn-danger" (click)="deleteUsuario(usuario.id)">Delete</button>
+    </td>
+  </tr>
   </tbody>
 
 </table>
