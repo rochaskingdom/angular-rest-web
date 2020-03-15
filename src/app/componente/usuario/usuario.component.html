@@ -1,7 +1,7 @@
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
 <table class="table">
 
-  <thead class="thead-dark">
+  <thead>
     <th scope="col">ID</th>
     <th scope="col">NOME</th>
     <th scope="col">CPF</th>
@@ -12,6 +12,7 @@
       <td>{{usuario.id}}</td>
       <td>{{usuario.nome}}</td>
       <td>{{usuario.cpf}}</td>
+      <td><button class="btn btn-danger" (click)="deleteUsuario(usuario.id)">Delete</button></td>
     </tr>
   </tbody>
 
